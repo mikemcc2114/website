@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="I am a MBA/MS student at CU Boulder. I am interested in exploring the intersection of supply chain, data, and cyber security.">
+<title>Mike McCormick</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.hero-image {
+  background-image: url("flatirons.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: top;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.nav {
+  padding: 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-image" id="title">
+  <div class="hero-text">
+    <h1 style="font-size:80px">Mike McCormick</h1>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="nav" id="mynav">
+  <ul>
+    <li><a class="active" href="#title">Home</a></li>
+    <li><a href="https://www.mikeamccormick.com/portfolio.html">Portfolio</a></li>
+    <li><a href="https://www.mikeamccormick.com/reading.html">Reading Notes</a></li>
+    <li><a href="https://www.linkedin.com/in/mikeamccormick/">Contact</a></li>
+  </ul>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var nav = document.getElementById("mynav");
+var sticky = nav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
